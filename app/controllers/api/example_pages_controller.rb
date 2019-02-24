@@ -8,7 +8,7 @@ class Api::ExamplePagesController < ApplicationController
   def lotto_method
     lotto_numbers = []
     6.times do
-      lotto_numbers << rand(60)
+      lotto_numbers << rand(1..60)
       @lotto = lotto_numbers
     end
     render 'lotto_view.json.jbuilder'
